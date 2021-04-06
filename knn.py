@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.metrics.pairwise import euclidean_distances, manhattan_distances
 
+# May not work well for skewed distributions
 def zscore_standardization(data):
     for i, column_data in enumerate(data.transpose()):
         data[:, i] = (column_data - column_data.mean()) / column_data.std()
